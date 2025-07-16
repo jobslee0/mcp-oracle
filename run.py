@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from mcp_server_jysd_cx_oracle import dev
+from pkg.db_oracle_get_mcp_sse import dev
 
 if __name__ == "__main__":
     dev()

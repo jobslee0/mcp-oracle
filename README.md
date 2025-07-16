@@ -1,14 +1,14 @@
 # mcp-server-oracle
 Model Context Protocol server to access oracle
 
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+**适配Oracle 11g低版本，需要指定Oracle Home路径；目前变量传递还有点问题，可先通过手工指定连接常量完成配置；已通过本地Cherry Studio MCP使用自测。**
+
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Demos
 
-
 https://github.com/user-attachments/assets/dc4e377b-4efb-43e6-85fa-93ed852fe21f
-
 
 
 ## Quickstart
@@ -16,26 +16,14 @@ https://github.com/user-attachments/assets/dc4e377b-4efb-43e6-85fa-93ed852fe21f
 To try this in Claude Desktop app, add this to your claude config files:
 
 ```json
-{
-  "mcpServers": {
-    "mcp-server-oracle": {
-      "command": "uvx",
-      "args": [
-        "mcp-server-oracle"
-      ],
-      "env": {
-        "ORACLE_CONNECTION_STRING": "username/password@hostname:password/service_name"
-      }
-    }
-  }
-}
+目前还未发布公共版本
 ```
 
 ### Prerequisites
 
 - UV (pacakge manager)
-- Python 3.12+
-- Claude Desktop
+- Python 3.10+
+- Cherry Studio
 
 ### Installation
 

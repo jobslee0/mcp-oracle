@@ -3,7 +3,7 @@ import sys
 import signal
 from typing import Any
 from mcp.server.fastmcp import FastMCP
-from . import oracle_tools
+import Oracle11gTools as oracle_tools
 from dotenv import load_dotenv
 
 
@@ -11,9 +11,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize the FastMCP server
-mcp = FastMCP("mcp-server-jysd-cx-oracle")
+mcp = FastMCP("DbOracleGetMcp")
 
-oracle_tools.connection_string = os.getenv("ORACLE_CONNECTION_STRING")
+oracle_tools.oracle_user = os.getenv("ORACLE_USER")
+oracle_tools.oracle_password = os.getenv("ORACLE_PASSWORD")
+oracle_tools.oracle_url = os.getenv("ORACLE_URL")
+oracle_tools.lib_path = os.getenv("ORACLE_HOME")
 
 
 @mcp.tool()
@@ -49,7 +52,6 @@ async def reqd_query(query: str) -> str:
 def main() -> None:
     mcp.run(transport='sse')
 
-
 def dev() -> None:
     """
     Development function that handles Ctrl+C gracefully.
@@ -75,3 +77,4 @@ def dev() -> None:
     except Exception as e:
         print(f"\nError: {e}", file=sys.stderr)
         sys.exit(1)
+
