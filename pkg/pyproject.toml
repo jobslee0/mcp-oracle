@@ -15,5 +15,5 @@ url = "https://mirrors.aliyun.com/pypi/simple/"
 default = true
 
 [project.scripts]
-db_oracle_get_mcp = "pkg.db_oracle_get_mcp:main"
-dev = "pkg.db_oracle_get_mcp_sse:dev"
+db_oracle_get_mcp = "db_oracle_get_mcp:main"
+dev = "db_oracle_get_mcp_sse:dev"
