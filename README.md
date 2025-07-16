@@ -1,4 +1,4 @@
-# mcp-server-oracle
+# mcp-server-oracle-11g
 Model Context Protocol server to access oracle
 
 **适配Oracle 11g低版本，需要指定Oracle Home路径；目前变量传递还有点问题，可先通过手工指定连接常量完成配置；已通过本地Cherry Studio MCP使用自测。**
